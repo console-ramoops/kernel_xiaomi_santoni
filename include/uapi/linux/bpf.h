@@ -1183,11 +1183,11 @@ struct __sk_buff {
 	__u32 local_ip6[4];	/* Stored in network byte order */
 	__u32 remote_port;	/* Stored in network byte order */
 	__u32 local_port;	/* stored in host byte order */
+	/* ... here. */
 
+	__u32 data_meta;
 	__bpf_md_ptr(struct bpf_flow_keys *, flow_keys);
 	__u64 tstamp;
-	/* ... here. */
-	__u32 data_meta;
 	__bpf_md_ptr(struct bpf_sock *, sk);
 };
 
